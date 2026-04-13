@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Bakery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #d2691e;
+      padding: 15px 20px;
+      color: white;
+    }
+
+    .navbar h1 {
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 50px;
+      background: url('https://images.unsplash.com/photo-1549931319-a545dcf3bc73') no-repeat center/cover;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+    }
+
+    /* Products */
+    .products {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 15px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <h1>Sweet Bakery</h1>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h2>Fresh & Delicious Bakery Items</h2>
+    <p>Enjoy cakes, pastries, and more!</p>
+  </div>
+
+  <!-- Products -->
+  <section class="products" id="products">
+    <h2>Our Items</h2>
+    <div class="product-container">
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl8glpUEZ0iFrYOVEpWcpDsM7JGaVNZPjh4EUDK6Nh3Lu95IsyfvuDHwE_o5j3R6H58MW1U3ewPAj3mWzPqPlxEGl1N9vuRvrnwMXmEoLE&s=10">
+        <h3>Chocolate Cake</h3>
+        <p>Delicious chocolate layered cake.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0" alt="Donut">
+        <h3>Donuts</h3>
+        <p>Sweet and soft donuts.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff" alt="Bread">
+        <h3>Fresh Bread</h3>
+        <p>Healthy and freshly baked bread.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Contact us: jeemano650@email.com</p>
+  </footer>
+
+</body>
+</html>
