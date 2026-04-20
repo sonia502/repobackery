@@ -21,31 +21,20 @@
       color: white;
     }
 
-    .navbar h1 {
-      margin: 0;
-    }
-
     .nav-links a {
       color: white;
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
+      cursor: pointer;
     }
 
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* Hero Section */
+    /* Hero */
     .hero {
       text-align: center;
       padding: 50px;
       background: url('https://images.unsplash.com/photo-1549931319-a545dcf3bc73') no-repeat center/cover;
       color: white;
-    }
-
-    .hero h2 {
-      font-size: 40px;
     }
 
     /* Products */
@@ -74,15 +63,6 @@
       border-radius: 10px;
     }
 
-    .card h3 {
-      margin: 10px 0;
-    }
-
-    .card p {
-      color: #555;
-    }
-
-    /* Footer */
     footer {
       background: #333;
       color: white;
@@ -90,8 +70,49 @@
       padding: 15px;
       margin-top: 20px;
     }
+
+    /* FORM POPUP */
+    .form-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .form-box {
+      background: white;
+      width: 300px;
+      padding: 20px;
+      margin: 100px auto;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    .form-box input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .form-box button {
+      background: #d2691e;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .close {
+      color: red;
+      cursor: pointer;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -101,10 +122,12 @@
       <a href="#">Home</a>
       <a href="#products">Products</a>
       <a href="#contact">Contact</a>
+      <a onclick="openLogin()">Login</a>
+      <a onclick="openSignup()">Signup</a>
     </div>
   </div>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <div class="hero">
     <h2>Fresh & Delicious Bakery Items</h2>
     <p>Enjoy cakes, pastries, and more!</p>
@@ -122,13 +145,13 @@
       </div>
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0" alt="Donut">
+        <img src="https://tinyurl.com/5h2e2mmk">
         <h3>Donuts</h3>
         <p>Sweet and soft donuts.</p>
       </div>
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff" alt="Bread">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff">
         <h3>Fresh Bread</h3>
         <p>Healthy and freshly baked bread.</p>
       </div>
@@ -136,10 +159,49 @@
     </div>
   </section>
 
+  <!-- LOGIN FORM -->
+  <div id="loginForm" class="form-popup">
+    <div class="form-box">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button>Login</button>
+      <p class="close" onclick="closeForm()">Close</p>
+    </div>
+  </div>
+
+  <!-- SIGNUP FORM -->
+  <div id="signupForm" class="form-popup">
+    <div class="form-box">
+      <h2>Signup</h2>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button>Signup</button>
+      <p class="close" onclick="closeForm()">Close</p>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer id="contact">
     <p>Contact us: jeemano650@email.com</p>
   </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function openLogin() {
+      document.getElementById("loginForm").style.display = "block";
+    }
+
+    function openSignup() {
+      document.getElementById("signupForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("signupForm").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
